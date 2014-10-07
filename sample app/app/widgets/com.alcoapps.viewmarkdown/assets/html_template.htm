@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">	
+	<head>
+		<title>Markdown-to-HTML Sample</title>
+		<style>##STYLESHEET##</style>
+		<script type="text/javascript">##SHOWDOWN##</script>
+		<style>
+			/* this fits images to the screen */
+			img {
+	    		width:100%;
+			}
+		</style>
+	</head>
+	<body style="margin: 10px">
+	<div data-markdown>##INSERT_MARKDOWN##</div>
+	<script type="text/javascript">
+		window.onload=function(){
+			// this function is the reverse version of escapeHTML found at
+			// https://github.com/evilstreak/markdown-js/blob/master/src/render_tree.js
+			function unescapeHTML( text ) {
+				return text.replace( /&amp;/g, "&" )
+							.replace( /&lt;/g, "<" )
+							.replace( /&gt;/g, ">" )
+							.replace( /&quot;/g, "\"" )
+							.replace( /&#39;/g, "'" );
+			}
+
+			// based on https://gist.github.com/paulirish/1343518
+			(function(){
+				[].forEach.call( document.querySelectorAll('[data-markdown]'), function fn(elem){
+					elem.innerHTML = (new Showdown.converter()).makeHtml(unescapeHTML(elem.innerHTML));
+				});
+			}());
+
+			var links = document.getElementsByTagName("a"); 
+			for (var i = 0; i < links.length; i++) { 
+				if (!!links[i].href && links[i].href.length > 0) { // Check that there is an href
+					// this disables all external links
+	            	if (links[i].href.substr(0,5) !== 'file:'){
+				        links[i].href = "#";
+	            	}
+			   	}
+			}
+		}
+	</script>
+	</body>
+</html> 

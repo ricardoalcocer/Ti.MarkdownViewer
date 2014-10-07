@@ -1,0 +1,13 @@
+{
+	"id": "com.alcoapps.viewmarkdown",
+	"name": "Ti.MarkdownViewer",
+	"description" : "Alloy Widget to render MarkDown documents in your Appcelerator apps",
+	"author": "Ricardo Alcocer",
+	"version": "1.0",
+	"copyright":"Copyright (c) 2014",
+	"license":"MIT",
+	"min-alloy-version": "1.0",
+	"min-titanium-version":"2.1",
+	"tags":"",
+	"platforms":"android,ios"
+}

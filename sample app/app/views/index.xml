@@ -1,0 +1,5 @@
+<Alloy>
+	<Window class="container" layout="vertical">
+		<Widget src="com.alcoapps.viewmarkdown" id="markdownviewer"/>
+	</Window>
+</Alloy>
