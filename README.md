@@ -55,7 +55,7 @@ $.index.open();
 
 ### Overiding sylesheet
 
-If you wish to modify the default stylesheet, you an call the setExtraStyles method.  This is useful if need to change the background or font colors to match your app's UI.  You'll have to do this before you call setPagexxx.
+If you wish to modify the default stylesheet, you can call the setExtraStyles method.  This is useful if need to change the background or font colors to match your app's UI.  You'll have to do this before you call setPagexxx.
 
 
 ````javascript
