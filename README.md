@@ -53,6 +53,20 @@ $.index.open();
 
 ````
 
+### Overiding sylesheet
+
+If you wish to modify the default stylesheet, you an call the setExtraStyles method.  This is useful if need to change the background or font colors to match your app's UI.  You'll have to do this before you call setPagexxx.
+
+
+````javascript
+$.markdownviewer.setExtraStyles('<style>body{background-color: #cacaca}</style>');
+
+var f = Ti.Filesystem.getFile(Ti.Filesystem.resourcesDirectory,'md.md');
+var md = f.read().toString();
+$.markdownviewer.setPageFromText(md);
+````
+
+
 # Who's using it?
 
 Nobody so far.  Let me know if you use it!

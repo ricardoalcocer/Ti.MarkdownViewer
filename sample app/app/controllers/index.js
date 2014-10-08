@@ -1,3 +1,5 @@
+$.markdownviewer.setExtraStyles('<style>body{background-color: #cacaca}</style>');
+
 // FROM MARKDOWN TEXT STRING
 //
 // load markdown file to view

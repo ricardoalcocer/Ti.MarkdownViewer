@@ -3,7 +3,7 @@
 	"name": "Ti.MarkdownViewer",
 	"description" : "Alloy Widget to render MarkDown documents in your Appcelerator apps",
 	"author": "Ricardo Alcocer",
-	"version": "1.0",
+	"version": "1.1",
 	"copyright":"Copyright (c) 2014",
 	"license":"MIT",
 	"min-alloy-version": "1.0",

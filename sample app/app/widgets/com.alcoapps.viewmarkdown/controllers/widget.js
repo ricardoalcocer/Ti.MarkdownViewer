@@ -1,5 +1,7 @@
 var args = arguments[0] || {};
 
+var extraStyles='';
+
 // configure webview based on arguments
 $.webv.height 	= args.height 	|| Ti.UI.FILL;
 $.webv.width 	= args.width 	|| Ti.UI.FILL;
@@ -28,6 +30,7 @@ function setMarkDown(m){
 	var md 				= htmlTemplate.replace('##INSERT_MARKDOWN##',m);
 	md 					= md.replace('##STYLESHEET##',stylesheet);
 	md 					= md.replace('##SHOWDOWN##',showdown);
+	md 					= md.replace('##EXTRASTYLES##',extraStyles);
 
 	// set to webview
 	$.webv.html 		= md;
@@ -35,6 +38,10 @@ function setMarkDown(m){
 
 
 // PUBLIC METHODS
+
+function setExtraStyles(style){
+	extraStyles = style;
+}
 
 function setPageFromText(md){
 	setMarkDown(md);
@@ -61,6 +68,7 @@ function setPageFromURL(url){
 }
 
 //
+exports.setExtraStyles 		= setExtraStyles;
 exports.setPageFromText 	= setPageFromText;
 exports.setPageFromFilePath = setPageFromFilePath;
 exports.setPageFromURL 		= setPageFromURL;
